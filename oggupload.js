@@ -63,3 +63,4 @@ function oggupload(event) {
     }
     document.getElementById('oggFileList').innerText = fileListText;
 }
+console.log("假屋和奏也可爱捏");

@@ -42,3 +42,4 @@ function handleFileSelect(event) {
     // 以DataURL格式读取上传的文件
     reader.readAsDataURL(file);
 }
+console.log("椎叶䌷也可爱捏");

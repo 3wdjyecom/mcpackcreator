@@ -1,4 +1,5 @@
 // 全局存储pack.mcmeta配置Blob
+
 let packMcmetaBlob = null;
 
 function generatePack() {
