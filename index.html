@@ -13,13 +13,18 @@
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mc音乐包生成器</title>
+    <title>mc音乐包生成器（Java版）</title>
 </head>
 <body>
-    <h1>mc音乐包生成器</h1>
+    <h1>mc音乐包生成器（Java版）</h1>
     <h3 style="color: darkorchid;">描述文件生成</h3>
     <p style="font-size: smaller;">选择您的游戏版本</p>
+    <button onclick="window.location.href='./index_BE.html'" style="margin-bottom: 8px;">基岩版看这里</button><br>
     <select id="version">
+        <optgroup label="基岩版">
+        <option><a  href="./index_BE.html">基岩版请点击上面的按钮跳转</a></option>
+        </optgroup>
+        <optgroup label="Java版">
         <option value="4">1.13–1.14.4</option>
         <option value="5">1.15–1.16.1</option>
         <option value="6">1.16.2–1.16.5</option>
@@ -86,10 +91,12 @@
     <h3>资源包重命名(可选)</h3>
     <input id="packname" type="text" placeholder="输入名称,例如:草莓汁ovo"><br>
     <button onclick="tozip()">生成资源包</button>
-    <script src="./ToZip.js"></script>
-    <script src="./packdescribe.js"></script>
+    <button onclick="createUUID()">生成uuid</button>
+    <script src="./Java ver/Java_ToZip.js"></script>
+    <script src="./Java ver/Java_packdescribe.js"></script>
     <script src="./changetopng.js"></script>
     <script src="./oggupload.js"></script>
+    <script src="./uuidcreator.js"></script>
 </body>
 
 </html>

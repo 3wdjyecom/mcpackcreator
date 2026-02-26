@@ -11,14 +11,14 @@ async function tozip() {
         // 2. 初始化JSZip实例
         const zip = new JSZip();
         // 创建资源包目录结构：assets/minecraft/sounds/records
-        const recordsFolder = zip.folder("assets/minecraft/sounds/records");
+        const recordsFolder = zip.folder("sounds/music/game/records");
         
-        // 3. 添加pack.mcmeta到ZIP根目录
-        zip.file("pack.mcmeta", packMcmetaBlob);
+        // 3. 添加manifest.json到ZIP根目录
+        zip.file("manifest.json", packMcmetaBlob);
 
         // 4. 添加封面图片（MC资源包封面标准命名为pack.png）
         if (coverImageBlob) {
-            zip.file("pack.png", coverImageBlob);
+            zip.file("pack_icon.png", coverImageBlob);
         }
 
         // 5. 添加OGG文件到records文件夹（如果有选中的话）
@@ -49,8 +49,8 @@ async function tozip() {
 
         // 8. 触发下载
         try {
-            saveAs(zipBlob, `${finalPackName}.zip`);
-            alert(`资源包打包完成！文件名将为：${finalPackName}.zip`);
+            saveAs(zipBlob, `${finalPackName}.mcpack`);
+            alert(`资源包打包完成！文件名将为：${finalPackName}.mcpack`);
         } catch (error) {
             alert(`下载失败：${error.message}`);
             console.error("下载出错：", error);
