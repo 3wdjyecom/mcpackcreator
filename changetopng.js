@@ -43,3 +43,5 @@ function handleFileSelect(event) {
     reader.readAsDataURL(file);
 }
 console.log("椎叶䌷也可爱捏");
+console.log("丛雨也可爱捏");
+console.log("朝武芳乃也可爱捏");
