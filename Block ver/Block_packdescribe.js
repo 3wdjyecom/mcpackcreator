@@ -14,6 +14,8 @@ function createUUID() {
 // 测试使用
 const uuid1 = createUUID();
 const uuid2 = createUUID();
+console.log("丛雨可爱捏");
+console.log("朝武芳乃可爱捏");
 console.log("生成的UUID：", uuid1);
 console.log("生成的UUID：", uuid2);
 
